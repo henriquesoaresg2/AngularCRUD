@@ -1,0 +1,69 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC Preta",
+      "price": 1.59
+    },
+    {
+      "id": 2,
+      "name": "Caneta BIC Vermelha",
+      "price": 1.59
+    },
+    {
+      "id": 3,
+      "name": "Caneta BIC Azul",
+      "price": 1.59
+    },
+    {
+      "id": 4,
+      "name": "Borracha",
+      "price": 0.49
+    },
+    {
+      "id": 5,
+      "name": "Lápis HB",
+      "price": 0.99
+    },
+    {
+      "id": 6,
+      "name": "Regra 30 cm",
+      "price": 3
+    },
+    {
+      "id": 7,
+      "name": "Caderno de desenhos",
+      "price": 13.9
+    },
+    {
+      "name": "Produto de Teste",
+      "price": 125.98,
+      "id": 8
+    },
+    {
+      "name": "Geladeira",
+      "price": 3990.9,
+      "id": 9
+    },
+    {
+      "name": "Altair",
+      "price": 100,
+      "id": 10
+    },
+    {
+      "name": "Banana Nanica",
+      "price": 6.2,
+      "id": 11
+    },
+    {
+      "name": "Vinho Tinto Baratão",
+      "price": 19.9,
+      "id": 12
+    },
+    {
+      "name": "Batata",
+      "price": 3.99,
+      "id": 13
+    }
+  ]
+}
