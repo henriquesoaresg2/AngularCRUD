@@ -21,19 +21,12 @@ export class ProductCreateComponent implements OnInit {
   }
 
   createProduct(): void{
-    if(this.product.name == '' || this.product.price == null){
-      console.log("name: " + this.product.name
-      + "\n price: " + this.product.price);
-      this.productService.showMessage('Dados invalidos! Produto não cadastrado...');
-    }else{
-
-      this.productService.create(this.product).subscribe(
-        ()=>{
-          this.productService.showMessage('Produto criado!');
-          this.router.navigate(['/products']);
-        }
-      );
-    }
+    this.productService.create(this.product).subscribe(
+      ()=>{
+        this.productService.showMessage('Produto criado!');
+        this.router.navigate(['/products']);
+      }
+    );
   }
 
   cancel(): void{

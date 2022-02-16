@@ -1,3 +1,15 @@
 table{
     width: 100%;
 }
+
+table ng-container > th{
+    background-color: aqua;
+    position: relative;
+    top:0;
+}
+
+.edit{
+    margin-right: 5px;
+}
+.edit > i{color: var(--textWhite);}
+.delete > i{color: var(--warn);}
