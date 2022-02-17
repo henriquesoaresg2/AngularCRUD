@@ -12,7 +12,10 @@
 }
 
 .content{
-    padding: 16px;
+    padding: 0 16px 16px 16px;
+    margin: 16px 0 0 0;
     color: var(--textWhite);
+    max-height: 78vh;
+    display: block;
     /* background-color: var(--bgDark); */
 }

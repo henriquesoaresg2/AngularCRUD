@@ -1,24 +1,20 @@
 <div class="mat-elevation-z4">
     <mat-table [dataSource]="products!">
-      <!-- Id Column -->
       <ng-container matColumnDef="id">
         <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
         <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
       </ng-container>
   
-      <!-- Name Column -->
       <ng-container matColumnDef="name">
         <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
         <mat-cell *matCellDef="let row">{{row.name}}</mat-cell>
       </ng-container>
-  
-      <!-- Price Column -->
+
       <ng-container matColumnDef="price">
         <mat-header-cell *matHeaderCellDef>Price</mat-header-cell>
         <mat-cell *matCellDef="let row">{{row.price | currency:'BRL'}}</mat-cell>
       </ng-container>
-
-      <!-- Action Column -->
+      
       <ng-container matColumnDef="action">
         <mat-header-cell *matHeaderCellDef>Ações</mat-header-cell>
         <mat-cell *matCellDef="let row">
@@ -31,18 +27,46 @@
         </mat-cell>
       </ng-container>
   
-      <mat-header-row *matHeaderRowDef="['id','name','price','action'];sticky: true"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: ['id','name','price','action'];"></mat-row>
-
-      <!-- <mat-header-row *matHeaderRowDef="['position', 'name', 'weight', 'symbol'];sticky: true"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: ['position', 'name', 'weight', 'symbol'];"></mat-row> -->
+      <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
+</div>
 
-    <!-- <mat-paginator
-      [pageSizeOptions]="[5, 10, 20]"
-      showFirstLastButtons
-      aria-label="Select page of periodic elements"
-    >
-    </mat-paginator> -->
-  </div>
+
+
+<!--
+  <table mat-table [dataSource]="products!" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>
+        No.
+      </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
   
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>
+        Name
+      </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef>
+        Weight
+      </th>
+      <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>
+        Symbol
+      </th>
+      <td mat-cell *matCellDef="let element"> {{element.action}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+-->
